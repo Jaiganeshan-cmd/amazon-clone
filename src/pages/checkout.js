@@ -4,7 +4,7 @@ import Currency from "react-currency-formatter";
 import { getTotal, selectItems } from "../slices/basketSlice";
 import { useSelector } from "react-redux";
 import CheckoutProducts from "../components/CheckoutProducts";
-import { useSession } from "next-auth/client";
+import { signIn, useSession } from "next-auth/client";
 
 function Checkout() {
   const items = useSelector(selectItems);
@@ -60,6 +60,7 @@ function Checkout() {
                   !session &&
                   "from-gray-300 to-gray-500 border-gray-200 text-gray-800 cursor-not-allowed ring-0 focus:ring-gray-500 active:from-gray-500"
                 }`}
+                onClick={!session ? signIn : null}
               >
                 {session ? "Proceed to checkout" : "Sign in to continue"}
               </button>
