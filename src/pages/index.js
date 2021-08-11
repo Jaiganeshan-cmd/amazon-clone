@@ -11,7 +11,7 @@ export default function Home({ products }) {
         <title>Amazon</title>
       </Head>
 
-      <header className="sticky top-0 w-full z-10">x
+      <header className="sticky top-0 w-full z-10">
         <Header />
       </header>
 
