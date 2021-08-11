@@ -24,7 +24,7 @@ function Product({ id, title, price, description, category, image }) {
   };
 
   return (
-    <div className="relative flex flex-col m-5 bg-white z-30 p-10">
+    <div className="relative flex flex-col m-5 bg-white z-1 p-10">
       <p className="absolute top-2 right-2 italic text-gray-400">{category}</p>
       <Image src={image} height={200} width={200} objectFit="contain" />
       <h4 className="my-3">{title}</h4>
@@ -39,10 +39,10 @@ function Product({ id, title, price, description, category, image }) {
         <p className="text-xs my-2 line-clamp-2 ">{description}</p>
       </div>
       <div>
-        <Currency quantity={price}></Currency>
+        <Currency quantity={price} currency="INR"></Currency>
       </div>
       {isPrime && (
-        <div className="flex items-center space-x-2 -mt-5">
+        <div className="flex items-center space-x-2">
           <img className="w-12" src="https://links.papareact.com/fdw" alt="" />
           <p className="text-xs text-gray-500">Free Next-day Delivery</p>
         </div>
