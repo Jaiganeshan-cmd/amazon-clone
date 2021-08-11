@@ -1,7 +1,7 @@
 import moment from "moment";
 import { getSession, useSession } from "next-auth/client";
 import db from "../../firebase";
-import Header from "../components/header";
+import Header from "../components/Header";
 import OrderdItems from "../components/Orders";
 function Orders({ orders }) {
   const [session] = useSession();
